@@ -1,9 +1,13 @@
-#Starter Kit for [Building Applications in React and Redux in ES6](http://www.pluralsight.com/author/cory-house) on Pluralsight
+
+###Naming Convention
+1. [Action Types](http://stackoverflow.com/questions/35740580/naming-convention-of-events-in-redux-js)
+
+
 
 ## Get Started
 1. **Install [Node 6](https://nodejs.org)**. Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)
-2. **Clone this repository.** - `git clone https://github.com/coryhouse/pluralsight-redux-starter.git` or [download the zip](https://github.com/coryhouse/pluralsight-redux-starter/archive/master.zip)
-3. **Make sure you're in the directory you just created.** - `cd pluralsight-redux-starter`
+2. **Clone this repository.** 
+3. **Make sure you're in the directory you just created.** - `cd dashboard-react`
 4. **Install Node Packages.** - `npm install`
 5. **Run the app.** - `npm start -s`
 This will run the automated build process, start up a webserver, and open the application in your default browser. When doing development with this kit, this command will continue watching files all your files. Every time you hit save the code is rebuilt, linting runs, and tests run automatically. Note: The -s flag is optional. It enables silent mode which suppresses unnecessary messages during the build.
@@ -20,6 +24,10 @@ This will run the automated build process, start up a webserver, and open the ap
 6. Use path.resolve on all path references in both the dev and prod webpack.config. [See this commit](https://github.com/coryhouse/pluralsight-redux-starter/commit/298848d4332d3bec9eb4e23592e710083acaf340) for an example.
 7. Delete any .eslintrc in your user directory and disable any ESLint plugin / custom rules within your editor since these will conflict with the ESLint rules defined in the course.
 8. Nothing above work? Delete your node_modules folder and re-run npm install.
+
+###Related Articles
+- [Goodbye ../../../](http://www.davidboyne.co.uk/2016/04/29/react-webpack-gem.html)
+- [Clear Folder Structure](https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346)
 
 ###Production Dependencies
 | **Dependency** | **Use** |
