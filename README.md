@@ -26,8 +26,17 @@ This will run the automated build process, start up a webserver, and open the ap
 8. Nothing above work? Delete your node_modules folder and re-run npm install.
 
 ###Related Articles
+File structure on this project was decided as a result of some informative articles below.
 - [Goodbye ../../../](http://www.davidboyne.co.uk/2016/04/29/react-webpack-gem.html)
+
+Move component `xyz` you want to share with other pages to the closest `shared/components/` folder and import it `'components/xyz'`
 - [Clear Folder Structure](https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346)
+
+Instead of `screens`, `pages` directory is used as web consists of pages not screens unlike mobile apps.
+ 
+- [Ducks: Redux Reducer Bundles](https://github.com/erikras/ducks-modular-redux)
+
+Merged `Actions`, `ActionTypes` and `Reducers` under `redactions` folder (Meaning reducers + actions)
 
 ###Production Dependencies
 | **Dependency** | **Use** |

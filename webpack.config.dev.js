@@ -3,7 +3,12 @@ import path from 'path';
 
 export default {
   debug: true,
-  devtool: 'inline-source-map',
+  /**
+   * Devtool
+   * Reference: http://webpack.github.io/docs/configuration.html#devtool
+   * Type of sourcemap to use per build type
+   */
+  devtool: 'cheap-module-source-map', //'inline-source-map'
   noInfo: false,
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
@@ -27,12 +32,15 @@ export default {
     loaders: [
       {test: /\.js$/, include: path.join(__dirname, 'src/client'), exclude: /node_modules/, loaders: ['babel']},
       {test: /(\.css)$/, loaders: ['style', 'css']},
+      {test: /(\.less)$/, loader: 'style!css!less'},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
-      {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
+      {test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader: 'file-loader'}
+      /*{test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
-      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}*/
     ]
   }, resolve:{
+    //we use shared directory as module directory so we don't need to add ../../..
     modulesDirectories: ['src', 'node_modules', 'shared']
   }
 };

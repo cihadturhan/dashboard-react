@@ -1,0 +1,453 @@
+/*======================================================================================= */
+/*============================= TOP NAV BAR ============================================= */
+/*======================================================================================= */
+@navbar-color: #32404E;
+
+#navbar {
+
+  position: fixed;
+
+    /* ===================== LOGO ===================== */
+    /*center & adjusting img size*/
+    .navbar-brand>img {
+        height: 80%;
+        margin: 0 auto;
+        margin-top: 6px;
+    }
+
+    /* ===================== SEARCH BAR ===================== */
+    #navbar-container {
+        background-color: @navbar-color;
+    }
+
+    .top-search {
+      margin-top: 9px;
+      position: relative;
+    }
+
+    .navbar-content {
+        box-shadow: none;
+    }
+
+    .navbar-top-links {
+      &:first-child {
+        margin-left: -13px;
+      }
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      .dropdown {
+        a.dropdown-toggle {
+          color: white;
+        }
+        a.dropdown-toggle:hover, a.dropdown-toggle:active, a.dropdown-toggle:focus {
+          color: #515151;
+        }
+      }
+      .tgl-menu-btn {
+        a {
+          color: white;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+
+        #add-app-text{
+          display: none;
+        }
+
+        .navbar-content {
+          position: absolute;
+          right: 0px;
+          top: 0;
+          left: auto;
+          width: calc(100% - 100px);
+          background: transparent;
+        }
+
+        .navbar-brand {
+            .nav-logo {
+                margin-left: 10px;
+                width:75%;
+                height: auto;
+                margin-top: 15%;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+      .custom-search-form {
+        //width: 380px;
+        width: 173%;
+      }
+      .navbar-brand {
+        .nav-logo {
+          margin-left: 10px;
+        }
+      }
+      .navbar-top-links {
+        .dropdown {
+          a.dropdown-toggle, a.dropdown-toggle:hover,
+          a.dropdown-toggle:active, a.dropdown-toggle:focus {
+            color: #515151;
+          }
+        }
+      }
+    }
+
+    @media (min-width:768px) {
+      .tgl-menu-btn {
+        display: none;
+      }
+    }
+
+    .navbar-brand > img {
+        height: 80%;
+        margin-top: 5px;
+    }
+
+}
+
+.twitter-typeahead {
+    width: 100%;
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 100%;
+  padding: 5px 12px;
+  height: 31px;
+  /*padding: 8px 12px;*/
+  font-size: 16px;
+  /*line-height: 30px;*/
+  border: 2px solid #ccc;
+  /*-webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;*/
+  outline: none;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    .nav-logo {
+      margin-left: 10px;
+    }
+  }
+}
+
+/*.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}*/
+
+/*.tt-hint {
+  color: #999
+}*/
+
+.tt-menu {
+  /*width: 422px;*/
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  overflow: auto;
+  max-height: 380px;
+}
+
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 24px;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion span {
+    font-weight: lighter;
+    font-size: smaller;
+    display:block;
+}
+
+.tt-suggestion img {
+    margin-right: 10px;
+}
+
+.tt-suggestion .app-info{
+    display:block;
+    float:left;
+    width:80%;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+
+.typeahead-source {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  margin: 0 20px 5px 20px;
+  padding-bottom: 6px;
+}
+
+.typeahead-spinner {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  font-size: large;
+  display: none;
+  z-index:5;
+}
+
+.typeahead-clear {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  font-size: large;
+  display:none;
+  cursor:pointer;
+  z-index:5;
+}
+
+#notification-list{
+    background-color:white;
+}
+
+#dropdown-top-charts{
+    .badge-primary{
+        top:45%;
+    }
+}
+
+#demo-wg-server {
+  padding: 5px 10px;
+  ul {
+    list-style-type: none;
+  }
+}
+
+#navbar-search-app {
+   position: absolute;
+   left: 0;
+   width: 500px;
+
+  .typeahead {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s 0.1s ease, opacity 0.3s ease;
+
+    border: 1px solid tomato;
+    border-radius: 15px;
+    background-color: white;
+    font-size: .9em;
+  }
+  &:hover .typeahead, .typeahead:focus, .typeahead:active{
+    width: 100%;
+    opacity: 1;
+  }
+  &:hover #navbar-add-app-btn {
+    opacity: 0;
+  }
+
+  #navbar-add-app-btn {
+    position: absolute;
+    transition: opacity 0.4s ease;
+    border: 1px solid #32404e;
+  }
+}
+
+
+/* ===================== MY-APP-LIST  =====================  */
+#my-apps {
+
+  #app-select-switch{
+
+    .app-trash {
+      cursor:pointer;
+      color: white;
+      &:hover{
+        color: tomato;
+      }
+    }
+
+    .my-app-info{
+
+      .my-app-name{
+        & > *{
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        & > .app-publisher {
+          font-size: 0.75em;
+        }
+      }
+
+
+      i.fa.fa-apple {
+        margin: 0;
+      }
+      i.fa.fa-android {
+        margin: 0;
+      }
+
+
+      .my-app-icon{
+        margin-right:5px;
+        width:30px;
+        display:block;
+        float:left;
+      }
+
+    }
+
+    .my-app-name {
+      font-size: 15px;
+      flex: 1 1 460px;
+      width: 300px;
+      line-height: 120%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & > .my-app-info{
+
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.0));
+      color: hsl(0,0%,90%);
+      border-left: 1px solid rgba(0, 0, 0, 0.5);
+      border-right: 1px solid rgba(0, 0, 0, 0.5);
+      cursor:pointer;
+
+      &:hover{
+        color: hsl(0,0%,100%);
+        background-color: hsla(0, 0%, 0%, 0.1);
+      }
+
+      & > *{
+        display: table-column;
+        float: none;
+      }
+    }
+
+    .my-app-list {
+      min-width: 250px;
+      padding: 0;
+      margin-top: 0;
+      width: 100%;
+      background-color: @navbar-color;
+      border: 1px solid @navbar-color;
+      min-height: 30px;
+      max-height: 500px;
+      overflow: auto;
+      transition: visibility 0.01s 0.25s;
+
+
+
+      & > li.my-app {
+        padding: 10px 15px 10px 10px;
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        cursor: pointer;
+        line-height: 0;
+
+        .top-myapp {
+          display: inline-flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+
+          .my-app-actions {
+            flex: 0 0 60px;
+            font-size: 18px;
+            text-align: right;
+          }
+
+          > a {
+            padding: 0px;
+            color: white;
+          }
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+      }
+    }
+
+
+    .my-app-right-icons{
+      margin-right:5px;
+    }
+    .my-app-device-icon{
+      margin:0px;
+    }
+
+    #app-list-searchbox {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      background: #405469;
+      border: none;
+      color: white;
+    }
+  }
+
+  ul {
+    .app-select {
+      background-color: white;
+      width: 100%;
+      padding: 11px 0 10px 0px;
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  #my-apps #app-select-switch .my-app-info .my-app-name {
+    width: 150px;
+  }
+  #navbar-search-app{
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px){
+  #my-apps #app-select-switch .my-app-info .my-app-name{
+    display: none;
+  }
+}

@@ -1,4 +1,5 @@
 # editorconfig.org
+# See all available features at https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
 root = true
 
 [*]
@@ -8,6 +9,8 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+quote_type = single
+indent_brace_style = K&R
 
 [*.md]
 trim_trailing_whitespace = false

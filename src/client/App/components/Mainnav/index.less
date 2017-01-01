@@ -1,0 +1,149 @@
+/*======================================================================================= */
+/*=============================== SIDE NAV BAR ========================================== */
+/*======================================================================================= */
+
+//#mainnav, #mainnav-menu>.active {
+//    height: 100%;
+//    background-color: white;
+//    transition: none;
+//}
+
+#mainnav-container {
+    position: fixed;
+}
+
+#mainnav {
+    height: calc(100% + 50px);
+    #mainnav-menu {
+        li {
+            transition:none;
+            position: relative;
+            line-height:0;
+            a.active {
+                box-shadow: inset 5px 0 0 0 #f06400;
+            }
+
+            .section-title {
+                padding: 5px 20px;
+                strong {
+                    font-weight: 600 !important;
+                }
+            }
+
+            &.disabled {
+              & > a {
+                  &:visited, &:active, &:hover{
+                      color:#aaa;
+                  }
+              }
+            }
+
+            .arrow{
+                float:none;
+                margin-left: auto;
+            }
+
+            .label {
+                padding-top: 2px;
+                padding-bottom: 2px;
+                margin-left: 3px;
+            }
+        }
+
+        ul {
+            a {
+                font-size: 13px;
+            }
+            a:hover, a:visited, a:active {
+                color: #515151;
+                padding-left: 40px;
+                font-weight: 400;
+            }
+        }
+        &>li>a{
+            height: 40px;
+        }
+
+        a {
+            font-weight: 300;
+            color: #515151;
+            white-space: nowrap;
+            padding: 12px 0 12px 18.5px;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    #mainnav-shortcut {
+        max-height: none;
+        overflow: visible;
+        background-color: #F3F3F3;
+    }
+    #mainnav-shortcut>ul {
+        width: 100%;
+        margin: 0;
+    }
+
+    #mainnav-menu ul a, .menu-popover .sub-menu ul a {
+        padding: 0px 20px 3px 35px;
+    }
+
+
+    .list-group, ul{
+        margin-bottom: 0px;
+    }
+
+    .actions>ul>li:last-child {
+        padding-bottom: 5px;
+    }
+
+
+
+    /* ===================== SIDEBAR WIDGET ===================== */
+    .mainnav-widget {
+        //background-color: white;
+        //color: #515151;
+        width: 220px;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .mainnav-widget a:hover{
+        font-weight:bold;
+    }
+
+    a.new{
+        color:#5fa2dd!important;
+    }
+
+    .badges {
+        font-size:11px;
+        font-weight: bold;
+    }
+
+    .badges-alert:after{
+        background-color:#f76c51;
+    }
+
+    .badge-menu:after{
+        position: absolute;
+        top: 10px;
+        left: 190px;
+     }
+
+
+}
+
+.mainnav-sm #mainnav .my-app-list {
+    visibility: hidden;
+    transition: none;
+}
+
+.main-nav-links {
+    white-space: nowrap;
+}
