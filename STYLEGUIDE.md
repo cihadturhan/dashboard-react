@@ -21,20 +21,23 @@ Always use single quotes for strings for JS, CSS and double quotes for HTML,
 unless you need to include single quotes inside string. 
 
 ######Examples:
-```
+```javascript
 //JAVASCRIPT
 let a = 'Hello'; 
 let b = 'She said "Yeah"'
 let c = "Sometimes you need to use single brackets (') inside text"; 
 let d = `Use backticks only if you need to inject ${variable}`;
 
-
-//CSS or LESS
-background-image: url('example.com/test.png')
-content: ''
-
-
-//HTML
+```
+```css
+/*CSS or LESS*/
+*{
+  background-image: url('http://example.com/test.png');
+  content: '';
+}
+```
+```html
+<!--HTML-->
 <div id="container" title="Hello"> </div>
 ```
 ---
@@ -133,6 +136,7 @@ Webpack will search for shared folder starting from `Component1.js` directory to
 
 - If you need to share a file with other pages or components, move it inside of `/shared` folder of the **closest common parent** 
 so you don't have to pollute root `shared` folder.
+######Example
 ```
 client
 ├── App
@@ -202,4 +206,32 @@ Do
 items.forEach((d, i) => {});
 items.map((d, i) => {});
 let myNewObject = Object.assign({}, myObject, otherObject};
+```
+- If your component/container consists of one renderable block use single file.
+######Example
+```
+components
+   ├── Component1.js
+   └── Component2.js
+```
+Usage
+```javascript
+import Comp1 from 'component1';
+import Comp2 from 'component2';
+````
+- If you realize your component/container consists of multiple renderable blocks, create a folder with the same
+name and create index.js that gathers other modules
+######Example
+```
+components
+   ├── Component1.js
+   │   ├──index.js //Imports SubComponent1 and SubComponent2
+   │   ├──SubComponent1.js
+   │   └──SubComponent2.js
+   └── Component2.js
+```
+Usage — Realize nothing changes and you can use it as is 
+```javascript
+import Comp1 from 'component1';
+import Comp2 from 'component2';
 ```

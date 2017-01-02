@@ -5,4 +5,5 @@ import { Route, IndexRoute} from 'react-router';
 export default (<Route path="users" component={Users}>
   <IndexRoute component={UsersIndex}/>
   <Route path="top" component={User}/>
+  <Route path="new" component={User}/>
 </Route>);
