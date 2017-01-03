@@ -1,8 +1,10 @@
-You will mostly write components and containers. To save some time, add the following templates to your WebStorm file
-and use them from new->your_template_name
+In the project, most of time you will write Components and Containers. 
 
-- Under File -> New -> Edit File Templates...
-- Click (+) sign on top right 
+To save some time, add the following templates to your WebStorm file
+and use them from `new -> your_template_name`
+
+- Under `File -> New -> Edit File Templates...`
+- Click `(+)` sign on top right 
 - Assign name as the following title and content with `js` extension. 
 
 **React Container Component**
@@ -65,7 +67,7 @@ function mapDispatchToProps(dispatch){
 export default connect(mapStateToProps, mapDispatchToProps)($NAME);
 ```
 
-**React Stateless Component Component**
+**React Stateless Component**
 ```javascript
 import React, {PropTypes} from 'react';
 
@@ -92,4 +94,14 @@ import $NAME from './$NAME';
 describe('$NAME via React Test Utils', ()=>{
 
 });
+```
+
+**React Router File**
+```javascript
+import React from 'react';
+import { render } from 'react-dom';
+import { Route, IndexRoute} from 'react-router';
+import Component from './components/Component';
+
+export default (<Route path="" component={Component}/>);
 ```

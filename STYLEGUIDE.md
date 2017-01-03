@@ -44,7 +44,7 @@ let d = `Use backticks only if you need to inject ${variable}`;
 ```
 indent_brace_style = K&R
 ```
-Open brace on the same line. Close it to the next line.
+Use K&R Style braces. Open brace on the same line. Close it to the next line.
 See [detailed indent style here](https://en.wikipedia.org/wiki/Indent_style#Placement_of_braces)
 ######Examples:
 ```
@@ -62,13 +62,14 @@ x.map( y => {
 });
 ```
 
-See more on `.editorconfig` file
+**See more on `.editorconfig` file**
 
 ---
 
+
 ##File & Folder Structure
 #### New Pages
-- If you need a new page, create a directory under App/pages, ideally the same name with 
+- If you need a new page, create a directory under `App/pages`, ideally the same name with 
 the corresponding page url. 
 
 ######Example
@@ -126,7 +127,7 @@ client
 │   └──util.js
 └── index.js
 ```
-In Component.js, you can freely use
+In Component1.js, you can freely use
 ```javascript
 import AppImage from 'components/AppImage';
 import settings from 'constants/settings';
@@ -230,7 +231,7 @@ components
    │   └──SubComponent2.js
    └── Component2.js
 ```
-Usage — Realize nothing changes and you can use it as is 
+Usage — Note that nothing changes and you use it as is 
 ```javascript
 import Comp1 from 'component1';
 import Comp2 from 'component2';
