@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import AppImage from '../shared/components/AppImage.js';
+import AppImage from 'components/AppImage.js';
 
 
 const NavbarApp = (props) => {

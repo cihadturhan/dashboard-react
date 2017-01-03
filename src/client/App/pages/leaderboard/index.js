@@ -1,9 +1,15 @@
-import React from 'react'
-import { render } from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
 import { Route, IndexRoute} from 'react-router';
 
-export default (<Route path="users" component={Users}>
-  <IndexRoute component={UsersIndex}/>
-  <Route path="top" component={User}/>
-  <Route path="new" component={User}/>
-</Route>);
+import AppHeader from './components/AppHeader';
+import LeaderBoardHome from './components/Leaderboard';
+import TopRoute from './pages/top';
+import NewRoute from './pages/new';
+
+export default (
+  <Route path="leaderboard" component={AppHeader}>
+    <IndexRoute component={LeaderBoardHome}/>
+    {TopRoute}
+    {NewRoute}
+  </Route>);

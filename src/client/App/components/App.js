@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as userActions from '../actions/user';
+import * as userActions from '../redactions/user';
+import BoilerPlate from '../components/Boilerplate';
 
 class App extends React.Component{
   constructor(props, context) {
@@ -14,6 +15,10 @@ class App extends React.Component{
     };
   }
 
+  componentWillMount(){
+    this.props.actions.getUserInfo();
+  }
+
   componentWillReceiveProps(nextProps) {
     //if (this.props.user.id != nextProps.user.id) {
       // Necessary to populate form when existing course is loaded directly.
@@ -21,14 +26,8 @@ class App extends React.Component{
     //}
   }
 
-  componentWillMount(){
-    this.props.actions.getUserInfo();
-  }
-
   render(){
-    return (<div id="container" className="mainnav-lg">
-      {this.props.children}
-      </div>);
+    return (<div id="container" className="mainnav-lg"><BoilerPlate>{this.props.children}</BoilerPlate></div>);
   }
 }
 
@@ -53,9 +52,9 @@ function mapDispatchToProps(dispatch) {
 }
 
 App.propTypes = {
-  children: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
-  user: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired,
+  actions: PropTypes.object
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

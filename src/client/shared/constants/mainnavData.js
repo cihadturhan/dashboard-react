@@ -5,7 +5,7 @@ export default [
     icon: 'random',
     title: 'App Analytics',
     contents: [
-      {href: '/dashboard/', title: 'App Report'},
+      {href: '/appreport/', title: 'App Report'},
       {href: '/rankinghistory/', title: 'Category Rankings'},
       {href: '/review/', title: 'Review Analysis'},
       {href: '/salesmetrics/', title: 'Sales Metrics'},

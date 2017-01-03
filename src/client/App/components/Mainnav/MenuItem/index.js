@@ -2,18 +2,11 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import classnames from 'classnames';
-import * as mainnavActions from '../../actions/mainnav';
+import * as activeItemActions from '../../../redactions/activeItem';
 import Collapse from 'react-collapse';
 import {Link} from 'react-router';
 
-const SubMenuItem = (props) => {
-  return <li><Link to={props.href} className="main-nav-links">{props.title}</Link></li>;
-};
-
-SubMenuItem.propTypes = {
-  href: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
-};
+import SubMenuItem from './SubMenuItem';
 
 class MenuItem extends React.Component {
   constructor(props, context) {
@@ -36,13 +29,13 @@ class MenuItem extends React.Component {
     if (data.contents && data.contents.length) {
       href = 'javascript:void(0)';
       children = (<Collapse isOpened={this.props.active} springConfig={{stiffness: 200, damping: 20}}>
-          <ul key={-1}>
-            {data.contents.map((content, i) => {
-              return <SubMenuItem {...content} key={i}/>;
-            })}
+        <ul key={-1}>
+          {data.contents.map((content, i) => {
+            return <SubMenuItem {...content} key={i}/>;
+          })}
 
-          </ul>
-        </Collapse>);
+        </ul>
+      </Collapse>);
     }
 
 
@@ -58,7 +51,7 @@ class MenuItem extends React.Component {
           {data.newTag && <span className="label label-primary">NEW</span>}
           {data.betaTag && <span className="label label-danger">BETA</span>}
           {data.badge &&
-          <span className="badges badges-alert badge-menu" data-badge={data.badge} id="rec-action-badge"></span>}
+          <span className="badges badges-alert badge-menu" data-badge={data.badge} id="rec-action-badge"> </span>}
           {data.contents && data.contents.length && <i className="arrow"></i>}
         </a>
         {children}
@@ -89,7 +82,7 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(mainnavActions, dispatch)
+    actions: bindActionCreators(activeItemActions, dispatch)
   };
 }
 

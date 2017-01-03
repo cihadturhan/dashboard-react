@@ -1,10 +1,11 @@
 export const MAINNAV_SET_ACTIVE = 'MAINNAV_SET_ACTIVE';
+
 import initalState from './initialState';
 
 // Reducer
 export default function activeItem(state = initalState.mainnav, action) {
   switch (action.type) {
-    case types.MAINNAV_SET_ACTIVE:
+    case MAINNAV_SET_ACTIVE:
       return action.data;
 
     default:
@@ -14,5 +15,5 @@ export default function activeItem(state = initalState.mainnav, action) {
 
 // Actions
 export function setActive(data){
-  return {type: types.MAINNAV_SET_ACTIVE, data};
+  return {type: MAINNAV_SET_ACTIVE, data};
 }

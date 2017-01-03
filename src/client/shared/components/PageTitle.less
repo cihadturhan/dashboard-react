@@ -1,0 +1,265 @@
+#page-title {
+  background-color: white;
+  padding-right: 25px;
+  box-shadow: 0 1px 1px hsla(0,0%,0%,0.3);
+
+  h1 {
+    display: inline-block;
+    min-width: 325px;
+    float: left;
+  }
+  .app-report-header {
+    width: 25%;
+  }
+  @media (max-width: 768px) {
+    .app-report-header {
+      width: 100%;
+      font-size:20px;
+    }
+
+    .left-actions{
+      display: none;
+    }
+
+    .right-actions{
+      font-size:9px;
+    }
+  }
+
+  .left-actions {
+    display: inline-block;
+    button.btn-default {
+      background-color: white;
+    }
+    button.btn-default:hover {
+      background-color: #fafafa;
+      border-color: #cdd6e1;
+      color: #515151;
+    }
+
+    .v-pane {
+      height: 150px;
+      overflow: auto;
+      border: 1px solid rgb(243, 243, 243);
+      padding-top: 3px;
+      background-color: white;
+
+      label {
+        display: inline-flex;
+      }
+    }
+  }
+
+
+  .right-actions {
+    display: inline-flex;
+    float: right;
+
+    @media (max-width: 768px) {
+      float:none;
+      #region {
+        margin-left:0px;
+      }
+    }
+    #device {
+      margin: 0px;
+    }
+
+  }
+  .right-actions>.dropdown {
+    margin: 0 8px;
+  }
+  .device-icon {
+    padding: 3px 5px 3px 0;
+    margin: 0px 5px;
+  }
+  .device-name {
+    vertical-align: middle;
+  }
+
+  #region .lang-name {
+    display: inline-block;
+  }
+
+  #region .invalid{
+    opacity: 0.5;
+  }
+
+  #region .estimation-not-provided{
+    opacity: 0.5;
+  }
+
+  #region-list>li.selected{
+    & .fa-check{
+      display: block;
+    }
+  }
+
+  #region-list>li{
+    & .fa-check{
+      display: none;
+    }
+  }
+
+}
+
+#page-title {
+
+  /* ======== Top Nav ========= */
+  .competitor-selector {
+    label {
+      width: 100%;
+      display: inline-flex !important;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .dropdown-menu {
+      li {
+        a {
+          color: #266fb0;
+        }
+        a:hover {
+          color: #ffffff;
+        }
+      }
+    }
+
+    li.current-competitor {
+      a:hover {
+        color: #ffffff;
+      }
+
+      .track-competitor {
+        a {
+          color: #266fb0 !important;
+        }
+        a:hover {
+          color: white !important;
+        }
+      }
+
+      input[type=checkbox] {
+        flex: 0 0 15px;
+      }
+    }
+  }
+
+  .app-report-header {
+    width: 25%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 5px;
+    display: block;
+    float:left;
+  }
+  @media (max-width: 768px) {
+    .app-report-header {
+      width: 100%;
+      font-size:20px;
+    }
+
+    .left-actions{
+      display: none;
+    }
+
+    .right-actions{
+      font-size:9px;
+    }
+  }
+
+  .left-actions {
+    margin-bottom:0px;
+    margin-top:1px;
+    button.btn{
+      font-size:11px;
+      font-weight: 600;
+    }
+
+    button.btn-default {
+      background-color: white;
+    }
+    button.btn-default:hover {
+      background-color: #fafafa;
+      border-color: #cdd6e1;
+      color: #515151;
+    }
+
+    ul.dropdown-menu {
+      width: 292px;
+      margin-top: 10px;
+
+      .panel {
+        margin-bottom: 0px;
+
+        .panel-header {
+          p {
+            margin: 5px;
+          }
+        }
+
+        .panel-body {
+          padding-top: 0px;
+        }
+      }
+    }
+    .v-pane {
+      height: 150px;
+      overflow: auto;
+      border: 1px solid rgb(243, 243, 243);
+      padding-top: 3px;
+      background-color: white;
+
+      label {
+        display: inline-flex;
+      }
+    }
+  }
+
+
+  .right-actions {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    display: inline-flex;
+    float: right;
+
+    @media (max-width: 768px) {
+      float:none;
+      #region {
+        margin-left:0px;
+      }
+    }
+    #device {
+      margin: 0px;
+    }
+
+  }
+  .right-actions>.dropdown {
+    margin: 0 8px;
+  }
+  .date-icon {
+    padding: 3px 5px 3px 0;
+  }
+  .device-icon {
+    padding: 3px 5px 3px 0;
+    margin: 0px 5px;
+  }
+  .date-name, .device-name {
+    vertical-align: middle;
+  }
+
+  #region .lang-name {
+    display: inline-block;
+  }
+
+  #region .invalid{
+    opacity: 0.5;
+  }
+
+  #region .estimation-not-provided{
+    opacity: 0.5;
+  }
+}
+
+.day-period{
+  z-index:1000;
+}

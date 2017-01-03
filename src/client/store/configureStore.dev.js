@@ -1,5 +1,5 @@
 import {createStore, applyMiddleware} from 'redux';
-import rootReducer from '../pages/App/reducers';
+import rootReducer from '../App/redactions';
 import axiosMiddleware from 'redux-axios-middleware';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';

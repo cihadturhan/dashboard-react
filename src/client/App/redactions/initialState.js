@@ -1,4 +1,4 @@
-import mainnavData from '../constants/mainnavData';
+import mainnavData from 'constants/mainnavData';
 
 export default {
   user: {},
