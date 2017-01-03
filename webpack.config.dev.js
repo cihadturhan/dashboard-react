@@ -1,7 +1,7 @@
-import webpack from 'webpack';
-import path from 'path';
+let webpack = require('webpack');
+let path = require('path');
 
-export default {
+module.exports = {
   debug: true,
   /**
    * Devtool
@@ -39,8 +39,10 @@ export default {
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}*/
     ]
-  }, resolve:{
+  },
+  resolve:{
+    root: path.resolve('/'),
     //we use shared directory as module directory so we don't need to add ../../..
-    modulesDirectories: ['src', 'node_modules', 'shared']
+    modulesDirectories: ['src', 'shared', 'node_modules']
   }
 };

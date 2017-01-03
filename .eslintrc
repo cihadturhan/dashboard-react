@@ -2,11 +2,20 @@
   "extends": [
     "eslint:recommended",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:import/warnings",
+    "plugin:react/recommended"
   ],
   "plugins": [
-    "react"
+    "react",
+    "import"
   ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.dev.js"
+      }
+    }
+  },
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
