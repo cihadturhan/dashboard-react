@@ -1,4 +1,4 @@
-import constants from 'constants';
+import constants from 's_constants';
 import axios from 'axios';
 
 
