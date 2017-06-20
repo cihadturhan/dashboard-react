@@ -22,7 +22,7 @@ app.get(['/top-charts'], function (req, res) {
   res.sendFile(path.join( __dirname, '/../../../dashboard-ui/client/dist/main/index.html'));
 });
 
-app.get('/', function(req, res) {
+app.get(['/', '/leaderboard/*'], function(req, res) {
   res.sendFile(path.join( __dirname, '../client/index.html'));
 });
 
